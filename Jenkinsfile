@@ -1,10 +1,9 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3-alpine'
-            label 'my-defined-label'
+            image 'ubuntu:latest'
                }
-           }
+        }
     stages {
         stage('Build') {
             steps {
