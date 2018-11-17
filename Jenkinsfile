@@ -1,11 +1,13 @@
 pipeline {
-agent {
-    docker {
-        image 'maven:3-alpine'
-        label 'my-defined-label'
-        args  '-v /tmp:/tmp'
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                bat 'docker --version'
+            }
+        }
     }
-}
+
     stages {
         stage('Build') {
             steps {
