@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '#!/usr/bin/sh -xe\n env'
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
         }
     }
