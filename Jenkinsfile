@@ -3,14 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'dir'
-            }
-        }
-    }
-
-    stages {
-        stage('Build') {
-            steps {
+                bat 'dir' 
                 echo 'Building..'
             }
         }
