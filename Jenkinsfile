@@ -5,7 +5,6 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh '#!/usr/bin/sh -xe\n node --version'
                 sh '#!/usr/bin/sh -xe\n env'
             }
         }
