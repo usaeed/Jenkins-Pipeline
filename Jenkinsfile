@@ -1,20 +1,20 @@
 pipeline {
-    agent none
+    agent any
+
     stages {
-        stage('Back-end') {
-            agent {
-                docker { image 'maven:3-alpine' }
-            }
+        stage('Build') {
             steps {
-                sh '#!/usr/bin/sh -xe\n env'
+                echo 'Building..'
             }
         }
-        stage('Front-end') {
-            agent {
-                docker { image 'node:7-alpine' }
-            }
+        stage('Test') {
             steps {
-                sh '#!/usr/bin/sh -xe\n env'
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
