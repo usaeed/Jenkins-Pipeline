@@ -17,5 +17,11 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('QA') {
+            steps {
+                echo 'Deploying....'
+                docker --version
+            }
+        }
     }
 }
